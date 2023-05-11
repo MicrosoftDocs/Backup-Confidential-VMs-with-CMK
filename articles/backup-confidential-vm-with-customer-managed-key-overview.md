@@ -30,4 +30,4 @@ We don't recommended to try this private preview feature for production workload
 
 ## Next steps
 
-- [Configure backup fo CVM with CMK](backup-confidential-vm-with-customer-managed-key-configure.md)
+- [Configure backup fo CVM with CMK](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/backup-confidential-vm-with-customer-managed-key-configure-backup.md)
