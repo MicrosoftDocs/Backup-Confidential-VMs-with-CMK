@@ -17,7 +17,7 @@ This articles describes how to configure and back up Confidential VM (CVM) with 
 
 Learn how to [create a new confidential VM with customer managed key](https://learn.microsoft.com/en-us/azure/confidential-computing/quick-create-confidential-vm-portal-amd), if needed.
 
-## Configure backup
+## Assign permissions
 
 Azure Backup needs certain access to Key Vault or managed Hardware Security Module (mHSM) that are used to store the key. Azure Backup also needs required permissions to back up the key. If it gets deleted for some reasons, you can restore this backed-up key.
 
@@ -50,22 +50,21 @@ To assign permissions for mHSM, follow these steps:
 
    - **Custom roles**: If you want to use custom role, then *dataActions* of that role should have these values:
 
-     1. **Microsoft.KeyVault/managedHsm/keys/read/action**
-     2. **Microsoft.KeyVault/managedHsm/keys/backup/action**
+     - **Microsoft.KeyVault/managedHsm/keys/read/action**
+     - **Microsoft.KeyVault/managedHsm/keys/backup/action**
 
-     You can create a custom role using this **Managed HSM data plane** role management- Azure Key Vault | Microsoft Learn 
-4.	For scope you can select the specific key used to create Confidential VM with Customer Managed Key or “All Keys” can be selected as well. 
-5.	In the Security principal please select “Backup Management Service”. 
+     You can create a custom role using the [Managed HSM data plane role management](https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/role-management#create-a-new-role-definition).
 
-So once Backup has necessary permissions, you can continue configuring Backup as usual.
+4. For scope, select the specific key used to create Confidential VM with Customer Managed Key.
 
+   You can also select **All Keys**. 
 
+5. On the **Security principal**, select **Backup Management Service**.
 
+## Configure backup
 
-
-
-
-
+Once backup has necessary permissions, you can continue configuring Backup as usual. [Learn more](https://learn.microsoft.com/en-us/azure/backup/backup-during-vm-creation).
 
 ## Next steps
 
+[Restore Confidential VM with Customer Managed Key using Azure Backup (preview)](backup-confidential-vm-with-customer-managed-key-configure-backup.md)
