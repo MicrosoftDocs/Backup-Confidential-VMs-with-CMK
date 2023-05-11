@@ -19,7 +19,7 @@ ms.author: jsuri
 ## Limitations
 
 - Support for backup of CVM with CMK (private preview) is only available on an enrolment basis.
-- Backup support for CVM with confidential OS disk encryption using CMK is only supported using Enhanced policy.
+- Backup support for CVM with confidential OS disk encryption using CMK is only supported using [Enhanced policy](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-enhanced-policy?tabs=azure-portal).
 - Original Location Restore (OLR), Alternate-Location Restore (ALR), Cross Zonal Restore, and Restore Disks are supported restore mechanisms.
 - Item-level restore, Cross subscription restore, Cross region restore are currently not supported.
 - Key rotation of CMK used for CVM isn't supported.
