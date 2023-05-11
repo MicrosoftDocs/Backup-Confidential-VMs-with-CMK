@@ -1,7 +1,7 @@
 ---
-title: Azure Backup - Configure backup of Confidential VM with Customer Managed Key using Azure Backup CMK overview (preview) 
-description: Learn about backing up Confidential VM with CMK using Azure Backup.
-ms.topic: conceptual
+title: Azure Restore - Configure backup of Confidential VM with Customer Managed Key using Azure Backup CMK overview (preview)
+description: Learn about restoring Confidential VM with CMK using Azure Backup.
+ms.topic: how-to
 ms.date: 05/15/2023
 ms.custom: references_regions
 ms.service: backup
@@ -36,7 +36,7 @@ This section shows how you can trigger the supported restores from the **Backup 
 
 To perform the restore, on the **Restore** page, choose the supported restore mechanism, and then trigger restore.
 
-![Screenshot shows the sunny restore scenario from the Backup Item page.](sunny-restore-scenario.png)
+![Screenshot shows the sunny restore scenario from the Backup Item page.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/sunny-restore-scenario.png)
 
 Please test the following cases here:
 
@@ -46,13 +46,13 @@ You can find a dropdown list to select a Disk Encryption Set (DES) on the **Rest
 
 For this scenario, don't provide any Disk Encryption Set (DES) and the restore perocess should be successful.
 
-![Screenshot shows Restore page of CVM with an option to enter DES.](disk-encryption-set-on-restore.png)
+![Screenshot shows Restore page of CVM with an option to enter DES.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/disk-encryption-set-on-restore.png)
 
 ### Scenario: Restore using Disk Encryption Set pointed to another key
 
 For this scenario, choose a DES pointing to a different key than the original from the dropdown list. The restoration may fail.
 
-![Screenshot shows restore fails using a DES pointing to a different CMK.](sunny-restore-fails-with-disk-encryption-set-pointed-to-different-key.png)
+![Screenshot shows restore fails using a DES pointing to a different CMK.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/sunny-restore-fails-with-disk-encryption-set-pointed-to-different-key.png)
 
 ## Rainy day restore scenarios
 
@@ -83,7 +83,7 @@ The restore process fails due to the missing key.
 
 The following screenshot shows the *Restore* page after first restore has failed.
 
-![Screenshot shows the first rainy restore has failed when the key is removed.](rainy-restore-fails-for-missing-key.png)
+![Screenshot shows the first rainy restore has failed when the key is removed.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/rainy-restore-fails-for-missing-key.png)
 
 ### Step 3: Perform post restoration steps
 
@@ -162,7 +162,7 @@ Disk Encryption Set and Confidential Guest VM Agent also need permissions on the
 
 - **For Key Vault**: To grant these permissions to the Key Vault, select the red message as shown in the following screenshot.
 
-  ![Screenshot shows how to assign permissions to the Key Vault.](assign-permissions-to-key-vault.png)
+  ![Screenshot shows how to assign permissions to the Key Vault.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/assign-permissions-to-key-vault.png)
 
 - **For Managed HSM**: To grant these permissions, follow these steps:
 
@@ -192,17 +192,17 @@ Follow these steps:
 
    This time, the restore should be successful.
 
-   ![Screenshot shows the selection of DES pointing to the restored key and trigger the restore.](re-trigger-restore.png)
+   ![Screenshot shows the selection of DES pointing to the restored key and trigger the restore.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/re-trigger-restore.png)
 
 ***Note***
 
 *If you select ***snapshot only tier*** recovery point to restore and then trigger the restore by selecting a different DES (than the original DES), an error appears because restore from a different DES though pointing to correct key isn't supported from the ***snapshot only tier***.*
 
-![Screenshot shows Snapshot only tier.](restore-using-snapshot-only-tier.png)
+![Screenshot shows Snapshot only tier.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/restore-using-snapshot-only-tier.png)
 
 *Restore error on selection of snapshot only tier.*
 
-![Screenshot shows restore error pn selection of snapshot only tier.](restore-error-on-selecting-snapshot-only-tier.png)
+![Screenshot shows restore error pn selection of snapshot only tier.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/restore-error-on-selecting-snapshot-only-tier.png)
 
 ## Contact us
 

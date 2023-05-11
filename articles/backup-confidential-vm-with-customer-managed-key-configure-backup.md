@@ -23,15 +23,15 @@ Azure Backup needs certain access to Key Vault or managed Hardware Security Modu
 
 When you configure backup of CVM with confidential OS disk encryption using CMK, the Azure portal automatically grants access to the Backup Management Service. If you're using other clients - such as PowerShell, CLI, REST API, permissions aren't granted automatically, and you need to grant the permissions.
 
-**Successful configuration**
+### Scenario 1: Successful configuration
 
 When you try configuring backup on CVM with CMK via Azure portal, the access to the backup of the Key Vault or mHSM is granted automatically.
 
-**Error while configuring backup**
+### Sceanario 2: Error while configuring backup
 
 When you try configuring backup on CVM with CMK from PowerShell, the following error appears. This happens because backup needs access to the key vault/mHSM.
 
-![Screenshot shows the error while configuring backup when Backup Service doesn't have required access for key.](configuration-error-for-missing-access-to-key.png)
+![Screenshot shows the error while configuring backup when Backup Service doesn't have required access for key.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/configuration-error-for-missing-access-to-key.png)
 
 You can assign access to the Backup Service, and then try configuring Azure Backup on CVM with CMK from PowerShell, CLI, or REST API. Learn about how to [assign permissions for the key vault](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-encryption#provide-permissions).
 
