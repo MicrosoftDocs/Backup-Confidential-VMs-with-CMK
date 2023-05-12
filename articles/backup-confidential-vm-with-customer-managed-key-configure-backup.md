@@ -62,7 +62,7 @@ To assign permissions for mHSM, follow these steps:
 
      You can create a custom role using the [Managed HSM data plane role management](https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/role-management#create-a-new-role-definition).
 
-4. For scope, select the specific key used to create Confidential VM with Customer Managed Key.
+4. For **Scope**, select the specific key used to create Confidential VM with Customer Managed Key.
 
    You can also select **All Keys**. 
 
