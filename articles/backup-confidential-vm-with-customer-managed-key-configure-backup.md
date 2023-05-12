@@ -1,5 +1,5 @@
 ---
-title: Azure Backup - Configure backup of Confidential VM with Customer Managed Key using Azure Backup CMK overview (preview) 
+title: Azure Backup - Configure backup of Confidential VM with Customer Managed Key using Azure Backup CMK (preview) 
 description: Learn about backing up Confidential VM with CMK using Azure Backup.
 ms.topic: conceptual
 ms.date: 05/15/2023

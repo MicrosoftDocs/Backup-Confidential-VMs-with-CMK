@@ -9,7 +9,7 @@ author: jyothisuri
 ms.author: jsuri
 ---
 
-# About backup of Confidential VM with Customer Managed Key using Azure Backup (preview)
+# About protection of Confidential VM with Customer Managed Key using Azure Backup (preview)
 
 [Azure Backup](https://learn.microsoft.com/en-us/azure/backup/backup-overview) now offers protection of Azure Confidential VMs (CVM) with Customer Managed Keys (CMK).
 
