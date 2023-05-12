@@ -11,9 +11,9 @@ ms.author: jsuri
 
 # Restore Confidential VM with Customer Managed Key using Azure Backup (preview)
 
-This articles describes how to restore Confidential VM (CVM) with Customer Managed Key (CMK).
+This article describes how to restore Confidential VM (CVM) with Customer Managed Key (CMK).
 
-[Azure Backup](https://learn.microsoft.com/en-us/azure/backup/backup-overview) now iffers protecting Azure Confidential VMs (CVM) with Customer Managed Keys (CMK). [Azure confidential VMs](https://learn.microsoft.com/en-us/azure/virtual-machines/dcasv5-dcadsv5-series) based on AMD processors with SEV-SNP technology, offers enhanced security. You can protect data from cloud operator and host with VM-level confidentiality. Confidential VMs help meet your security needs by providing hardware-based isolation.
+[Azure Backup](https://learn.microsoft.com/en-us/azure/backup/backup-overview) now offers protection of Azure Confidential VMs (CVM) with Customer Managed Keys (CMK). [Azure confidential VMs](https://learn.microsoft.com/en-us/azure/virtual-machines/dcasv5-dcadsv5-series), based on AMD processors with SEV-SNP technology, offers enhanced security. You can protect data from cloud operator and host with VM-level confidentiality. Confidential VMs help meet your security needs by providing hardware-based isolation.
 
 ## Restore scenarios
 
@@ -37,7 +37,7 @@ To perform the restore, on the **Restore** page, choose the supported restore me
 
 ![Screenshot shows the sunny restore scenario from the Backup Item page.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/sunny-restore-scenario.png)
 
-Please test the following cases here:
+See the following scenarios.
 
 ### Scenario 1: Restore without Disk Encryption Set
 
@@ -55,15 +55,17 @@ For this scenario, choose a DES pointing to a different key than the original fr
 
 ## Rainy day restore scenarios
 
-These scenarios comprise edge-case scenarios that occur due to some accidental reasons or malicious admins. To perform a rainy day restore:
+These scenarios comprise edge-case scenarios that occur due to some accidental reasons or malicious admins.
+
+Rainy day restore workflow:
 
 1. Perform first restore.
 
-   The restore will fail.
+   The restore will fail due to missing key.
 
 2. (Post-restoration process) Restore the Customer Managed Key that Azure Backup has backed up, and then create a new DES to point to the restored key.
 
-3. Trigger a restore again by entering the DES in the restore screen.
+3. Trigger a restore again by entering the DES on the *Restore* page.
 
 ### Step 1: Delete original Customer Managed Key
 

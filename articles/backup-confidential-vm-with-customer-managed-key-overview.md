@@ -11,9 +11,9 @@ ms.author: jsuri
 
 # About backup of Confidential VM with Customer Managed Key using Azure Backup (preview)
 
-[Azure Backup](https://learn.microsoft.com/en-us/azure/backup/backup-overview) now iffers protecting Azure Confidential VMs (CVM) with Customer Managed Keys (CMK).
+[Azure Backup](https://learn.microsoft.com/en-us/azure/backup/backup-overview) now offers protection of Azure Confidential VMs (CVM) with Customer Managed Keys (CMK).
 
-[Azure confidential VMs](https://learn.microsoft.com/en-us/azure/virtual-machines/dcasv5-dcadsv5-series) based on AMD processors with SEV-SNP technology, offers enhanced security. You can protect data from cloud operator and host with VM-level confidentiality. Confidential VMs help meet your security needs by providing hardware-based isolation.
+[Azure confidential VMs](https://learn.microsoft.com/en-us/azure/virtual-machines/dcasv5-dcadsv5-series), based on AMD processors with SEV-SNP technology, offers enhanced security. You can protect data from cloud operator and host with VM-level confidentiality. Confidential VMs help meet your security needs by providing hardware-based isolation.
 
 ## Limitations
 
