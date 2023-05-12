@@ -9,11 +9,15 @@ author: jyothisuri
 ms.author: jsuri
 ---
 
-# Restore Confidential VM with Customer Managed Key using Azure Backup (preview)
+# Restore Confidential VM with Customer Managed Key using Azure Backup (private preview)
 
 This article describes how to restore Confidential VM (CVM) with Customer Managed Key (CMK).
 
 [Azure Backup](https://learn.microsoft.com/en-us/azure/backup/backup-overview) now offers protection of Azure Confidential VMs (CVM) with Customer Managed Keys (CMK). [Azure confidential VMs](https://learn.microsoft.com/en-us/azure/virtual-machines/dcasv5-dcadsv5-series), based on AMD processors with SEV-SNP technology, offers enhanced security. You can protect data from cloud operator and host with VM-level confidentiality. Confidential VMs help meet your security needs by providing hardware-based isolation.
+
+***Note***
+
+*For any queries, write to us at [AskAzureBackupTeam@microsoft.com](mailto:AskAzureBackupTeam@microsoft.com).*
 
 ## Restore scenarios
 
@@ -199,7 +203,3 @@ Follow these steps:
 *Restore error on selection of snapshot only tier.*
 
 ![Screenshot shows restore error pn selection of snapshot only tier.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/restore-error-on-selecting-snapshot-only-tier.png)
-
-## Contact us
-
-For any queries, write to us at [AzureBackupForCVM@microsoft.com](mailto:AzureBackupForCVM@microsoft.com).
