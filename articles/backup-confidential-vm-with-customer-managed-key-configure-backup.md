@@ -13,29 +13,32 @@ ms.author: jsuri
 
 This articles describes how to configure and back up Confidential VM (CVM) with Customer Managed Key (CMK).
 
-(Awaiting intro from PM)
+[Azure Backup](https://learn.microsoft.com/en-us/azure/backup/backup-overview) now iffers protecting Azure Confidential VMs (CVM) with Customer Managed Keys (CMK). [Azure confidential VMs](https://learn.microsoft.com/en-us/azure/virtual-machines/dcasv5-dcadsv5-series) based on AMD processors with SEV-SNP technology, offers enhanced security. You can protect data from cloud operator and host with VM-level confidentiality. Confidential VMs help meet your security needs by providing hardware-based isolation.
 
-Learn how to [create a new confidential VM with customer managed key](https://learn.microsoft.com/en-us/azure/confidential-computing/quick-create-confidential-vm-portal-amd), if needed.
+## Create a new Confidential VM with Customer Managed Key
+
+Learn how to [create a new Confidential VM with Customer Managed Key](https://learn.microsoft.com/en-us/azure/confidential-computing/quick-create-confidential-vm-portal-amd), if needed.
 
 ## Assign permissions
 
-Azure Backup needs certain access to Key Vault or managed Hardware Security Module (mHSM) that are used to store the key. Azure Backup also needs required permissions to back up the key. If it gets deleted for some reasons, you can restore this backed-up key.
+Azure Backup needs certain access to Key Vault or managed Hardware Security Module (mHSM) that are used to store the key. Azure Backup also needs the required permissions to back up the key. If it gets deleted for some reason, you can restore this backed-up key.
 
-When you configure backup of CVM with confidential OS disk encryption using CMK, the Azure portal automatically grants access to the Backup Management Service. If you're using other clients - such as PowerShell, CLI, REST API, permissions aren't granted automatically, and you need to grant the permissions.
+When you configure backup of CVM with confidential OS disk encryption using CMK, the Azure portal automatically grants access to the Backup Management Service. If you're using other clients, such as PowerShell, CLI, or REST API, permissions aren't granted automatically, and you need to grant the permissions.
 
 ### Scenario 1: Successful configuration
 
-When you try configuring backup on CVM with CMK via Azure portal, the access to the backup of the Key Vault or mHSM is granted automatically.
+When you try configuring backup on CVM with CMK via Azure portal, access to the backup of the Key Vault or mHSM is granted automatically.
 
-### Sceanario 2: Error while configuring backup
+### Scenario 2: Error while configuring backup
 
-When you try configuring backup on CVM with CMK from PowerShell, the following error appears. This happens because backup needs access to the key vault/mHSM.
+When you try configuring backup on CVM with CMK from PowerShell, an error occurs. This happens because backup needs access to the Key Vault or mHSM.
 
 ![Screenshot shows the error while configuring backup when Backup Service doesn't have required access for key.](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/media/backup-confidential-vm-with-customer-managed-key/configuration-error-for-missing-access-to-key.png)
 
-You can assign access to the Backup Service, and then try configuring Azure Backup on CVM with CMK from PowerShell, CLI, or REST API. Learn about how to [assign permissions for the key vault](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-encryption#provide-permissions).
+You can assign access to the Backup Service, and then try configuring Azure Backup on CVM with CMK from PowerShell, CLI, or REST API. Learn how to [assign permissions for the key vault](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-encryption#provide-permissions).
 
 ***Note***
+
 *For CVM with CMK, key permissions (Get, List, Backup) only needed; Secret permissions aren't required.*
 
 To assign permissions for mHSM, follow these steps:
@@ -63,8 +66,8 @@ To assign permissions for mHSM, follow these steps:
 
 ## Configure backup
 
-Once backup has necessary permissions, you can continue configuring Backup as usual. [Learn more](https://learn.microsoft.com/en-us/azure/backup/backup-during-vm-creation).
+Once backup has the necessary permissions, you can continue configuring backup as usual. [Learn more](https://learn.microsoft.com/en-us/azure/backup/backup-during-vm-creation).
 
 ## Next steps
 
-[Restore Confidential VM with Customer Managed Key using Azure Backup (preview)](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/backup-confidential-vm-with-customer-managed-key-restore.md)
+[Restore CVM with CMK using Azure Backup (preview)](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/backup-confidential-vm-with-customer-managed-key-restore.md)
