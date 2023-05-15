@@ -27,9 +27,9 @@ ms.author: jsuri
 - Item-level restore, Cross Subscription Restore, Cross region restore are currently not supported.
 - Key rotation of CMK used for CVM isn't supported.
 
-## Recommendation
+## Private preview terms
 
-We recommended you not to try this private preview feature for production workloads.
+We recommended you not to try this private preview feature for production workloads. You can review other preview terms and / or sign up using [this form](https://aka.ms/azurebackupforcvmwithcmkpreview).
 
 ## Next steps
 
