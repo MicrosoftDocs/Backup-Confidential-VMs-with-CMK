@@ -154,7 +154,7 @@ To restore the key using PowerShell, run the following cmdlets:
    Restore-AzKeyVaultKey -HsmName '<target_mhsm_name>' -InputFile $keyDestination
    ```
 
-Now, you can create a new DES with Encryption type as *Confidential disk encryption with a customer-managed key* to point to this restored key. This DES should have enough permissions to perform a successful restore. If you've used a new Key Vault or managed HSM to restore the key, then *Backup Management Service* should have enough permissions on it. For granting permission for Key Vault or mHSM access, see [these steps](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/backup-confidential-vm-with-customer-managed-key-configure-backup.md#sceanario-2-error-while-configuring-backup).
+Now, you can create a new DES with Encryption type as *Confidential disk encryption with a customer-managed key* to point to this restored key. This DES should have enough permissions to perform a successful restore. If you've used a new Key Vault or managed HSM to restore the key, then *Backup Management Service* should have enough permissions on it. For granting permission for Key Vault or mHSM access, see [these steps](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/configure-backup-confidential-vm-with-customer-managed-key.md#scenario-2-error-while-configuring-backup).
 
 Disk Encryption Set and Confidential Guest VM Agent also need permissions on the Key Vault or Managed HSM. To provide the permissions, follow these steps:
 

@@ -72,4 +72,4 @@ Once backup has the necessary permissions, you can continue configuring backup a
 
 ## Next steps
 
-[Restore CVM with CMK using Azure Backup (private preview)](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/backup-confidential-vm-with-customer-managed-key-restore.md)
+[Restore CVM with CMK using Azure Backup (private preview)](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/restore-confidential-vm-with-customer-managed-key.md)

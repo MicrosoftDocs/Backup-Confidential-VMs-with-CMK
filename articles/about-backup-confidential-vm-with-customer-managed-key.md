@@ -33,4 +33,4 @@ We recommended you not to try this private preview feature for production worklo
 
 ## Next steps
 
-[Configure backup for CVM with CMK  using Azure Backup (private preview)](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/backup-confidential-vm-with-customer-managed-key-configure-backup.md)
+[Configure backup for CVM with CMK  using Azure Backup (private preview)](https://github.com/MicrosoftDocs/Backup-Confidential-VMs-with-CMK/blob/main/articles/configure-backup-confidential-vm-with-customer-managed-key.md)
