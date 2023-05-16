@@ -72,9 +72,10 @@ Rainy day restore workflow:
 ### Step 1: Delete original Customer Managed Key
 
 You need to delete the original Customer Managed Key (used for encrypting CVM), delete Key Vault, or mHSM having the original CMK.
+
 ***Important***
 
-*Ensure that you've Soft Delete enabled on the [key vault](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) / [mHSM](https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/soft-delete-overview) so that you can recover the key, key vault, or mHSM later. See the following sections to recover the key or key vault from the soft deleted state. .*
+*Ensure that you've Soft Delete enabled on the [key vault](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) / [mHSM](https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/soft-delete-overview) so that you can recover the key, key vault, or mHSM later. Learn more on [how to recover the key or key vault from the soft deleted state](https://learn.microsoft.com/en-us/azure/key-vault/general/key-vault-recovery?tabs=azure-portal). .*
 
 ### Step 2: Perform Restore
 
